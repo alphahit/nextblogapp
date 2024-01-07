@@ -1,0 +1,63 @@
+/* :root is a CSS pseudo-class that matches the root element of the document. 
+In an HTML document, this is typically the <html> element. 
+It's commonly used in CSS to declare global variables (also known as CSS Custom Properties). */
+:root {
+  --bg: #0d0c22;
+  --bgSoff: #2d2b42;
+  --text: white;
+  --textSoft: #e5e5e5;
+  --btn: #3673fd;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg); /* Using the variable for background color */
+  color: var(--text); /* Using the variable for text color */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 1536px;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 1536px) {
+  .container {
+    width: 1366px;
+  }
+}
+@media (max-width: 1366px) {
+  .container {
+    width: 1280px;
+    padding-left: 20px;
+    padding-right: 50px;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    width: 475px;
+  }
+}
